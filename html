@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Orçamentos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>Orçamentos Elétricos</h1>
+
+    <!-- Clientes -->
+    <section>
+      <h2>Clientes</h2>
+      <input type="text" id="clienteNome" placeholder="Nome">
+      <input type="text" id="clienteTelefone" placeholder="Telefone">
+      <input type="text" id="clienteRua" placeholder="Rua">
+      <input type="text" id="clienteNumero" placeholder="Número">
+      <input type="text" id="clienteBairro" placeholder="Bairro">
+      <button class="btn success" id="btnAddCliente">Adicionar Cliente</button>
+      <select id="selectCliente"></select>
+      <div id="clientesLista"></div>
+    </section>
+
+    <!-- Materiais -->
+    <section>
+      <h2>Materiais</h2>
+      <select id="categoriaMaterial"></select>
+      <select id="nomeMaterial"></select>
+      <input type="text" id="materialCustom" placeholder="Digite aqui..." style="display:none;">
+      <input type="number" id="quantidadeMaterial" placeholder="Quantidade">
+      <input type="number" id="valorUnitario" placeholder="Valor Unitário">
+      <button class="btn success" id="btnAddMaterial">Adicionar Material</button>
+      <div id="materiaisLista"></div>
+      <input type="number" id="maoDeObra" placeholder="Mão de obra">
+      <div>Total: R$ <span id="valorTotal">0,00</span></div>
+    </section>
+
+    <!-- Orçamentos -->
+    <section>
+      <h2>Orçamentos</h2>
+      <textarea id="observacoes" placeholder="Descrição do orçamento"></textarea>
+      <button class="btn success" id="btnSalvarOrcamento">Salvar Orçamento</button>
+      <button class="btn" id="btnExportarImagem">Exportar Imagem</button>
+      <div id="orcamentosLista"></div>
+      <div id="orcamentoPreview" class="preview"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
